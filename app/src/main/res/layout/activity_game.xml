@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="#F5F5F5">
+
+    <!-- Tombol Aksi (tetap sama) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="12dp">
+
+        <Button
+            android:id="@+id/btnKembali"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:text="Kembali"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/button_background"/>
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:text="Reset"
+            android:background="@drawable/button_background"/>
+    </LinearLayout>
+
+    <!-- Papan Game (tetap sama) -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <GridLayout
+                android:id="@+id/akariGrid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+        </ScrollView>
+    </HorizontalScrollView>
+
+    <!-- Area Pesan Status (dimodifikasi) -->
+    <LinearLayout
+        android:id="@+id/messageContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFEBEE"
+        android:visibility="gone"
+        android:padding="12dp"
+        android:layout_marginTop="8dp">
+
+        <!-- Pesan 1: Lampu bertabrakan -->
+        <TextView
+            android:id="@+id/tvLampConflict"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#D32F2F"
+            android:gravity="center"
+            android:visibility="gone"/>
+
+        <!-- Pesan 2: Dinding salah lampu -->
+        <TextView
+            android:id="@+id/tvWallConflict"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#D32F2F"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Pesan 3: Kotak belum terang -->
+        <TextView
+            android:id="@+id/tvUnlitCells"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#D32F2F"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+</LinearLayout>

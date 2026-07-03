@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Baris tombol difficulty -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/btnMudah"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Mudah"
+            android:backgroundTint="#D3D3D3"
+            android:layout_marginEnd="8dp"
+            android:textColor="#FF000000"
+            android:contentDescription="Tombol level mudah"/>
+
+        <Button
+            android:id="@+id/btnSedang"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sedang"
+            android:backgroundTint="#D3D3D3"
+            android:layout_marginEnd="8dp"
+            android:textColor="#FF000000"
+            android:contentDescription="Tombol level sedang"/>
+
+        <Button
+            android:id="@+id/btnSulit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sulit"
+            android:backgroundTint="#D3D3D3"
+            android:textColor="#FF000000"
+            android:contentDescription="Tombol level sulit"/>
+    </LinearLayout>
+
+    <!-- Grid untuk level -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:importantForAccessibility="auto">
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="4"
+            android:importantForAccessibility="auto"/>
+    </ScrollView>
+</LinearLayout>
